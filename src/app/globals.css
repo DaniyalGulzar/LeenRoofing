@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: revert;
+  font-weight: revert;
+  margin-bottom: 10px;
+}
+
+ol,
+ul,
+menu {
+  list-style: revert;
+  margin: revert;
+  padding: revert;
+}
+
+.m-0-imp {
+  margin: 0 !important;
+}
+
+textarea {
+  border: none;
+}
+
+.truncate-3-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.loading-spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 50% transparent black */
+  z-index: 9999;
+  /* Make sure the overlay is on top of other elements */
+}
+
+.border-radialgradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #7544f1 0%,
+    rgba(117, 68, 241, 0) 100%
+  );
+}
+
+.bg-linearGradient {
+  background: linear-gradient(
+    180deg,
+    rgba(117, 68, 241, 0.02) 0%,
+    rgba(117, 68, 241, 0.2) 100%
+  );
+}
+
+.text-13C1E8 {
+  color: #13c1e8;
+}
+
+.text-631681 {
+  color: #631681;
+}
+
+.text-4B0082 {
+  color: #4b0082;
+}
+
+.content-side {
+  flex: 1;
+  background: linear-gradient(180deg, #491161 0%, #721a97 99%);
+}
+
+.bg-800080 {
+  background-color: #800080;
+}
+
+.bg-F8F9FB {
+  background-color: #f8f9fb;
+}
+
+/* ///////////////SIGNUP CSS/////////////// */
+/* Flexbox layout for the form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields and select styling */
+.inputcreate,
+select {
+  margin-top: 5px;
+  padding: 8px;
+  width: 100%;
+  /* Full width of the form container */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+}
+
+/* Styling for name fields, displayed in a row */
+.name-fields {
+  display: flex;
+  gap: 10px;
+  /* Add spacing between fields */
+}
+
+.name-fields input {
+  width: calc(50% - 5px);
+  /* Adjust width to fit within the container */
+  margin-bottom: 10px;
+  /* Add margin for spacing */
+  height: 50px;
+  padding-left: 10px;
+}
+
+/* Button styling */
+.button-wrapper button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4b0066;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-wrapper button:hover {
+  background-color: #870ab4;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.form-container p {
+  margin: 5px 0;
+}
+
+/* Line styling */
+.line {
+  height: 1px;
+  background-color: #dfd5d5;
+  /* Line color */
+  margin: 20px 0;
+  /* Margin to space out the lines */
+}
+
+.conform-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.conform-group {
+  flex: 1;
+  min-width: 45%;
+  margin-right: 5%;
+}
+
+.conform-group:last-child {
+  margin-right: 0;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .name-fields {
+    flex-direction: column;
+  }
+
+  .name-fields input {
+    width: 100%;
+    /* Full width on small screens */
+  }
+
+  .conform-row {
+    flex-direction: column;
+  }
+
+  .conform-group input {
+    width: 100%;
+    /* Full width on small screens */
+  }
+
+  .form-container {
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .create-account-button {
+    width: 100%;
+    /* Full width on very small screens */
+  }
+
+  .form-container {
+    padding: 10px;
+    /* Further reduce padding for very small screens */
+  }
+}
+
+/* Hide number input spinner in Webkit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide number input spinner in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dcdcdc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a8c67;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4a8c67;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* main banner styles */
+
+.images-wrapper::-webkit-scrollbar {
+  display: none;
+}
